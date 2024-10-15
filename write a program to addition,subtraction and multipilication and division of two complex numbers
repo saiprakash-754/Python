@@ -1,0 +1,13 @@
+
+x=complex(input("c1: "))
+y=complex(input("c2: "))
+print("a1 + b2 =",   x+y   )
+
+# subtract c2 from c1 and print the result
+print("a1 - b2 =",   x-y   )
+
+# multiple c1, c2 and print the result
+print("a1 * b2 =",   x*y   )
+
+# divide c2 from c1 and print the result
+print("a1 / b2 =",  x/y    )
