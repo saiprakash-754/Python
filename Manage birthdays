@@ -1,0 +1,57 @@
+
+"""
+# Input names and birthdays
+names = input("Names: ").split(' ')
+birthdays = input("Birthdays: ").split(' ')
+
+# Create and sort the dictionary
+bd_dict = dict(zip(names, birthdays))
+
+sorted_dict = 
+
+
+# Print sorted dictionary
+for name, bday in sorted_dict.items():
+    print(f"{name}: {bday}")
+
+#write the code
+
+
+
+print("Final dictionary:")
+"""
+# Function to manage friends' birthdays
+def manage_birthdays():
+    # Input for initial names and birthdays
+    names = input("Names: ").split()  # Split the names by spaces
+    birthdays = input("Birthdays: ").split()  # Split the birthdays by spaces
+
+    # Initialize dictionary with names and birthdays
+    birthday_dict = {names[i]: birthdays[i] for i in range(len(names))}
+
+    # Print the sorted dictionary items by name
+    for name in sorted(birthday_dict):
+        print(f"{name}: {birthday_dict[name]}")
+
+    # Check for names and add if not found
+    while True:
+        name_to_check = input("Name to check (or 'quit' to exit): ")
+
+        if name_to_check.lower() == 'quit':
+            break
+
+        if name_to_check in birthday_dict:
+            print(f"Birthday: {birthday_dict[name_to_check]}")
+        else:
+            print("Name not found")
+            new_birthday = input("Birthday to add: ")
+            birthday_dict[name_to_check] = new_birthday
+            print("Added to dictionary")
+
+    # Print the final sorted dictionary
+    print("Final dictionary:")
+    for name in sorted(birthday_dict):
+        print(f"{name}: {birthday_dict[name]}")
+
+# Run the function
+manage_birthdays()
