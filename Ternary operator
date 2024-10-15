@@ -1,0 +1,10 @@
+
+firstnumber=float(input("Enter the first number: "))
+secondnumber=float(input("Enter the second number: "))
+print("Original numbers:")
+print('First number:',firstnumber)
+print('Second number:',secondnumber)
+firstnumber,secondnumber=secondnumber,firstnumber
+print("Swapped numbers:")
+print("First number:",firstnumber)
+print("Second number:",secondnumber)
