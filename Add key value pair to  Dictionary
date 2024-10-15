@@ -1,0 +1,30 @@
+
+def update_dictionary():
+    keys_input = input().strip()
+    values_input = input().strip()
+    keys = keys_input.split()
+    values = values_input.split()
+    
+    # Check if the number of keys matches the number of values
+    if len(keys) != len(values):
+        print("Invalid")
+        return
+    
+    # Create the original dictionary
+    original_dict = dict(zip(keys, values))
+    
+    # Read the new key and value to be added
+    new_key_value_input = input().strip()
+    new_key, new_value = new_key_value_input.split()
+    
+    # Display the original dictionary
+    print(original_dict)
+    
+    # Add the new key-value pair to the dictionary
+    original_dict[new_key] = new_value
+    
+    # Display the updated dictionary
+    print(original_dict)
+
+# Call the function to run the program
+update_dictionary()
