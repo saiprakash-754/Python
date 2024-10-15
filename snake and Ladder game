@@ -1,0 +1,43 @@
+
+        print(f"P1: {positions['P1']}, P2: {positions['P2']}")
+        print(f"{current_player} turn")
+        print("1.Roll")
+        print("2.Quit")
+        choice = input("Enter choice: ")
+
+        if choice not in ['1', '2']:
+            print("Invalid choice")
+            continue
+
+        if choice == '2':
+            winner = 'P1' if positions['P1'] > positions['P2'] else 'P2'
+            print(f"{winner} wins!")
+            break
+        
+        # Roll the dice
+        dice_roll = int(input("Enter dice roll (1-6): "))
+        if dice_roll < 1 or dice_roll > 6:
+            print("Invalid dice roll")
+            continue
+
+        print(f"{current_player} rolled: {dice_roll}")
+        positions[current_player] += dice_roll
+
+        # Check for snakes or ladders
+        if positions[current_player] in snakes:
+            print(f"Snake: {positions[current_player]} -> {snakes[positions[current_player]]}")
+            positions[current_player] = snakes[positions[current_player]]
+        elif positions[current_player] in ladders:
+            print(f"Ladder: {positions[current_player]} -> {ladders[positions[current_player]]}")
+            positions[current_player] = ladders[positions[current_player]]
+
+        # Check for win condition
+        if positions[current_player] >= 100:
+            print(f"{current_player} wins!")
+            break
+
+        # Switch players
+        current_player = 'P2' if current_player == 'P1' else 'P1'
+
+if __name__ == "__main__":
+    main()
