@@ -1,0 +1,8 @@
+inputlist=list(map(int,input().split(' ')))
+inputlist2=list(map(int,input().split(' ')))
+inputlist3=list(map(int,input().split(' ')))
+print(inputlist)
+inputlist.insert(inputlist2[0],inputlist2[1])
+print(inputlist)
+inputlist= inputlist[inputlist3[0]:inputlist3[1]]
+print(inputlist)
