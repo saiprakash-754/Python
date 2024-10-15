@@ -1,0 +1,8 @@
+def calculate_stats(l):
+	sum1=sum(l)
+	mean=round((sum1/len(l)),2)
+	Max=max(l)
+	return sum1,mean,Max
+lst=[int(x) for x in input().split()]
+a,b,c=calculate_stats(lst)
+print(a);print(b);print(c);
