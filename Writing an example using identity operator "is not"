@@ -1,0 +1,8 @@
+
+# Take user input for x
+x=int(input("x: "))
+# Take user input for y
+y=int(input("y: "))
+# check whether x is not y and print the result
+result = x is not y
+print(x, 'is not', y,  result   )
